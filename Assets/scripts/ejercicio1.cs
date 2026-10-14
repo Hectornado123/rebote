@@ -3,7 +3,7 @@ using UnityEngine;
 public class ejercicio1 : MonoBehaviour
 {
 
-    float velocidad = 2;
+    float velocidad = 3;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
