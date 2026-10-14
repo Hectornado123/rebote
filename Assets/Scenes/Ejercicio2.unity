@@ -292,6 +292,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5297b39b4762d9f42809e8f27391d33e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ejercicio2
+  speed: 1
+  JumpForce: 0
+  respawnPoint: {x: 0, y: 0, z: 0}
+  fallLimit: -10
 --- !u!135 &638398570
 SphereCollider:
   m_ObjectHideFlags: 0
