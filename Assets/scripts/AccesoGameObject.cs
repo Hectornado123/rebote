@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 public class AccesoGameObject : MonoBehaviour
 {
 
-    float velocidad = 2;
+
     public GameObject pelota;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

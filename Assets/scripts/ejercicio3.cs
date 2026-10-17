@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class ejercicio3 : MonoBehaviour
 {
     public float speed;
@@ -13,6 +13,7 @@ public class ejercicio3 : MonoBehaviour
     public GameObject enemy3;
     public GameObject enemy4;
     public GameObject enemy5;
+    float velocidad2 = 1f;
     void Start()
     {
         Debug.Log("Hola mundo");
@@ -44,6 +45,20 @@ public class ejercicio3 : MonoBehaviour
         enemy1.transform.Translate(velocidad * Time.deltaTime, 0, 0);
 
 
+        if (enemy2.transform.position.z > -2.66)
+        {
+
+            velocidad2 = -velocidad2;
+        }
+
+        if (enemy2.transform.position.z < 3.78f)
+        {
+
+            velocidad2 = -velocidad2;
+        }
+        enemy2.transform.Translate(0, 0, velocidad2 * Time.deltaTime);
+      
+
 
     }
     void FixedUpdate()
@@ -56,5 +71,12 @@ public class ejercicio3 : MonoBehaviour
 
         rb.AddForce(movement * speed);
 
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+
+        Debug.Log("te quemas");
+        SceneManager.LoadScene("ejercicio3");
     }
 }
