@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 public class ejercicio2 : MonoBehaviour
 {
 
@@ -31,10 +31,5 @@ public class ejercicio2 : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter(Collider other)
-    {
-
-        Debug.Log("te quemas");
-        SceneManager.LoadScene("ejercicio3");
-    }
+  
 }

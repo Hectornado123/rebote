@@ -4,9 +4,6 @@ public class ejercicio3 : MonoBehaviour
 {
     public float speed;
     private Rigidbody rb;
-    public float JumpForce;
-    public Vector3 respawnPoint;
-    public float fallLimit;
     public float velocidad;
     public GameObject enemy1;
     public GameObject enemy2;
@@ -14,6 +11,9 @@ public class ejercicio3 : MonoBehaviour
     public GameObject enemy4;
     public GameObject enemy5;
     float velocidad2 = 1f;
+    float velocidad3 = 1f;
+    float velocidad4 = 1f;
+    float velocidad5 = 1f;
     void Start()
     {
         Debug.Log("Hola mundo");
@@ -57,7 +57,49 @@ public class ejercicio3 : MonoBehaviour
             velocidad2 = -velocidad2;
         }
         enemy2.transform.Translate(0, 0, velocidad2 * Time.deltaTime);
-      
+
+
+        if (enemy3.transform.position.z > -2.66f)
+        {
+
+            velocidad3 = -velocidad3;
+        }
+
+        if (enemy3.transform.position.z < 3.78f)
+        {
+
+            velocidad3 = -velocidad3;
+        }
+        enemy3.transform.Translate(0, 0, velocidad3 * Time.deltaTime);
+
+
+        if (enemy4.transform.position.z > 14f)
+        {
+
+            velocidad4 = -velocidad4;
+        }
+
+        if (enemy4.transform.position.z <15f)
+        {
+
+            velocidad4 = -velocidad4;
+        }
+        enemy4.transform.Translate(0, 0, velocidad4 * Time.deltaTime);
+
+
+        if (enemy5.transform.position.x > 3.78f)
+        {
+
+            velocidad5 = -velocidad5;
+        }
+
+        if (enemy5.transform.position.x < -1.78f)
+        {
+
+            velocidad5 = -velocidad5;
+        }
+        enemy5.transform.Translate(velocidad5 * Time.deltaTime, 0, 0);
+
 
 
     }
